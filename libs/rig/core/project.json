@@ -1,0 +1,40 @@
+{
+  "name": "rig-core",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/rig/core/src",
+  "prefix": "nx-ng-storybook",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/rig/core"],
+      "options": {
+        "project": "libs/rig/core/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/rig/core/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/rig/core/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/rig/core"],
+      "options": {
+        "jestConfig": "libs/rig/core/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/rig/core/**/*.ts", "libs/rig/core/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}
