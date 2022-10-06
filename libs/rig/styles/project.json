@@ -1,0 +1,6 @@
+{
+  "name": "rig-styles",
+  "projectType": "library",
+  "sourceRoot": "libs/rig/styles",
+  "targets": {}
+}

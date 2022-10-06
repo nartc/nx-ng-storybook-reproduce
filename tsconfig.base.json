@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-ng-storybook/rig/storybook": ["libs/rig/storybook/src/index.ts"],
       "chau/rig": ["libs/rig/core/src/index.ts"]
     }
   },
